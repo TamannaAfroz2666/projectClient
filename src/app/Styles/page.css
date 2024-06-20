@@ -1,0 +1,16 @@
+.custom-modal .ant-modal-content {
+    background-color: rgba(27, 31, 34, 0.85); 
+  }
+  
+  
+  .custom-modal .ant-modal-header {
+    background-color: #d1c7c7;
+  }
+  
+  .custom-modal .ant-modal-body {
+    background-color: rgba(27, 31, 34, 0.85);
+  }
+  
+  .custom-modal .ant-modal-close-x {
+    color: white; 
+  }
