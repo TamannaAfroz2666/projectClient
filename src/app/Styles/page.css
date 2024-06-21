@@ -14,3 +14,20 @@
   .custom-modal .ant-modal-close-x {
     color: white; 
   }
+  .number-sub:hover hr{
+    visibility: hidden;
+
+
+  }
+  .linkdin-sub:hover hr{
+    visibility: hidden;
+
+  }
+  .email-sub:hover hr{
+    visibility: hidden;
+
+  }
+  .address-sub:hover hr{
+    visibility: hidden;
+
+  }
