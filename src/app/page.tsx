@@ -14,23 +14,24 @@ export default function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const [open, setOpen] = useState(false);
+  const [openAbout, setOpenAbout] = useState(false);
   const [openCertifications, setOpenCertifications] = useState(false);
   const [openProjects, setOpenProjects] = useState(false);
   const [openContact, setOpenContact] = useState(false);
 
-  const downloadCvHandler = () =>{
+  const downloadCvHandler = () => {
 
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1xFbVumaaXpguSC9nlqzWQ10HHF8tx1b-/view'; 
-    link.download = 'My_CV.pdf'; 
+    link.href = 'https://drive.google.com/file/d/1xFbVumaaXpguSC9nlqzWQ10HHF8tx1b-/view';
+    link.download = 'My_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
-   
+
   return (
-    <main className=" min-h-screen w-full m-auto">
-      <div className="flex items-center justify-center pt-[0rem] ml-[25rem]">
+    <main className=" min-h-screen w-full m-auto ">
+      {/* <div className="flex items-center justify-center pt-[0rem] ml-[25rem]">
         <p className="text-center p-10 w-[100px]">
           <CgHeart size={100}
             className="p-8 border-2 border-white-600 rounded-full" color="white" /></p>
@@ -40,95 +41,93 @@ export default function Home() {
         <div className="mt-[15rem] right-[16rem] relative" >
           <div className="border-b-2 border-white-600 w-[500px]"></div>
         </div>
+      </div> */}
+      <div className="xs:max-w-full md:max-w-full sm:max-w-full">
+        <h1 className="uppercase text-[#fff] text-center text-[2rem] tracking-[.5rem] pt-[10rem] xs:text-[1rem] pt-[2rem] max-w-full text-center md:pt-[10rem] md:text-[2rem] text-center max-w-full ">Mohammed Ahsan</h1>
+        <h1 className="uppercase text-[#fff] text-center text-[14px] tracking-[.2rem]  pt-4 pb-10 xs:max-w-full md:max-w-full sm:max-w-full">ASPIRING DATA ANALYST/SCIENTIST </h1>
       </div>
-      <div>
-        <h1 className="uppercase text-[#fff] text-center text-[2rem] tracking-[.5rem] pt-12">Mohammed Ahsan</h1>
-        <h1 className="uppercase text-[#fff] text-center text-[14px] tracking-[.2rem]  pt-4 pb-10">ASPIRING DATA ANALYST/SCIENTIST </h1>
-      </div>
-      <div className="flex items-center justify-center pb-10">
+      <div className="flex items-center justify-center pb-10 xs:max-w-full md:max-w-full sm:max-w-full ">
         <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={downloadCvHandler}>download resume</button>
       </div>
       <div className="flex items-center justify-center pt-4">
         <div>
-          <hr className="w-[500px]" />
+          <hr className="w-[500px] xs:w-[360px] md:w-[500px]" />
         </div>
       </div>
-      <div className="flex items-center justify-center " >
+      <div className="flex items-center justify-center xs:max-w-full md:max-w-full sm:max-w-full" >
         <div className=" h-[50px] bg-white w-[.006rem]"></div>
       </div>
-      <div className="flex items-center justify-center ">
-        <div className="ml-4">
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpen(true)} >
-            Aboutme
-          </button>
-          <Modal
-            // title="About Me"
-            centered
-            open={open}
-            // onOk={() => setOpen(false)}
-            onCancel={() => setOpen(false)}
-            width={800}
-            footer={null}
-            className="custom-modal"
-          >
-            <AboutMe />
-          </Modal>
+      <div className="flex flex-row items-center justify-center  md:w-full md:flex items-center justify-center  xs: max-w-full sm:max-w-full">
+        <div className=" ">
+          <div className="inline-flex flex-row xs:flex-col md:flex-row ml-4 lg:max-w-full sm:max-w-full">
+            <button className="uppercase  tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenAbout(true)} >
+              Aboutme
+            </button>
+            <Modal
 
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpen(true)} > skills</button>
-          <Modal
-            centered
-            open={open}
-            onCancel={() => setOpen(false)}
-            width={800}
-            footer={null}
-            className="custom-modal"
-          >
-            <Skills />
-          </Modal>
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer"  onClick={() => setOpenCertifications(true)}> certifications</button>
+              centered
+              open={openAbout}
 
-          <Modal
-            centered
-            open={openCertifications}
-            onCancel={() => setOpenCertifications(false)}
-            width={800}
-            footer={null}
-            className="custom-modal"
-          >
-            <Certifications/>
-            {/* <Skills /> */}
-          </Modal>
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenProjects(true)} >projects </button>
-          <Modal
-            centered
-            open={openProjects}
-            onCancel={() => setOpenProjects(false)}
-            width={800}
-            footer={null}
-            className="custom-modal"
-          >
-         
-            <Projects/>
-           
-          </Modal>
+              onCancel={() => setOpenAbout(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <AboutMe />
+            </Modal>
 
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpen(true)} > skills</button>
+            <Modal
+              centered
+              open={open}
+              onCancel={() => setOpen(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <Skills />
+            </Modal>
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenCertifications(true)}> certifications</button>
 
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer">competitions </button>
+            <Modal
+              centered
+              open={openCertifications}
+              onCancel={() => setOpenCertifications(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <Certifications />
 
+            </Modal>
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenProjects(true)} >projects </button>
+            <Modal
+              centered
+              open={openProjects}
+              onCancel={() => setOpenProjects(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <Projects />
+            </Modal>
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer">competitions </button>
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenContact(true)}>contact </button>
+            <Modal
+              centered
+              open={openContact}
+              onCancel={() => setOpenContact(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <Contact />
+            </Modal>
 
-          <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenContact(true)}>contact </button>
-          <Modal
-            centered
-            open={openContact}
-            onCancel={() => setOpenContact(false)}
-            width={800}
-            footer={null}
-            className="custom-modal"
-          >
-            <Contact/>
-          </Modal>
+          </div>
 
         </div>
+
       </div>
       <footer className="mt-[2rem]">
         <p className="text-center uppercase tracking-[.2rem] text-[.6rem] opacity-[.6rem]  text-[#fff]">© 2024 ALL RIGHTS RESERVED.</p>
