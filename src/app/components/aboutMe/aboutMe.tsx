@@ -13,26 +13,26 @@ const AboutMe = () => {
                 <div className='flex gap-4'>
                     <div>
                         <p className='text-[#ffffff] text-[20px] py-1 '> Hi, I am <strong className=' tracking-[.1rem]'> Tamanna Afroz</strong> </p>
-                        <p className='text-[#ffffff] text-[18px] py-1'> <strong className=' tracking-[.1rem]'>Front End Developer.</strong> </p>
-                        <p className='text-[#ffffff] text-[20px] py-4 '>A graduate student at the University of Daffodil International University with major <strong className=' tracking-[.1rem]'> Software Engineering </strong></p>
+                        {/* <p className='text-[#ffffff] text-[18px] py-1'> <strong className=' tracking-[.1rem]'>Front End Developer.</strong> </p> */}
+                        <p className='text-[#ffffff] text-[20px] py-4 '>A Front End Developer with a bachelors degree in  <strong className=' tracking-[.1rem]'> Software Engineering </strong> from Daffodil International University.  </p>
 
                     </div>
                     <div>
                     <Image
                             src="/Images/portfolio/portfolioImage.jpg"
                             width={400}
-                            height={400}
+                            height={300}
                             alt="Picture of the author"
-                            className=' rounded-[8px] pt-6'
+                            className='h-[200px] rounded-[8px] '
                         />
 
                     </div>
                 </div>
 
 
-                <p className='text-[#ffffff] text-[18px] py-4'>Having almost <strong className=' tracking-[.1rem]'> 1.5 year experience</strong> in React.js, Next.js, Vue.js, and implementing the various projects such as e-commarce project, Job Portal, Air lines project and so on. Proficient in React.js and Next.js but have basic ideas about Backend tools Nest.js framework and database postgresql, mySQL. </p>
+                <p className='text-[#ffffff] text-[18px] py-4'>I have <strong className=' tracking-[.1rem]'> 1.5 years experience</strong> with React.js, Next.js, and Vue.js, during which I've developed projects such as an e-commerce platform, a job portal, and an airline booking system. I am proficient in React.js and Next.js, and have foundational knowledge of backend tools like the Nest.js framework and databases such as PostgreSQL and MySQL. </p>
 
-                <p className='text-[#ffffff] text-[18px] py-4 '>I am skillful to use at git, gitLab and maintain task for Jira and Microsoft Excel.</p>
+                <p className='text-[#ffffff] text-[18px] py-4 '>I am skilled in using Git and GitLab for version control, and I effectively manage tasks with Jira and Microsoft Excel. </p>
             </div>
         </div>
     );
