@@ -8,6 +8,7 @@ import Skills from "./components/skills/skills";
 import Certifications from "./components/certifications/certifications";
 import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
+import ExperienceContent from "./components/Experience/Experience";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function Home() {
   const [openCertifications, setOpenCertifications] = useState(false);
   const [openProjects, setOpenProjects] = useState(false);
   const [openContact, setOpenContact] = useState(false);
+  const [openExperience, setOpenExperience] = useState(false);
 
   const downloadCvHandler = () => {
 
@@ -43,8 +45,8 @@ export default function Home() {
         </div>
       </div> */}
       <div className="xs:max-w-full md:max-w-full sm:max-w-full">
-        <h1 className="uppercase text-[#fff] text-center text-[2rem] tracking-[.5rem] pt-[10rem] xs:text-[1rem] pt-[2rem] max-w-full text-center md:pt-[10rem] md:text-[2rem] text-center max-w-full ">Mohammed Ahsan</h1>
-        <h1 className="uppercase text-[#fff] text-center text-[14px] tracking-[.2rem]  pt-4 pb-10 xs:max-w-full md:max-w-full sm:max-w-full">ASPIRING DATA ANALYST/SCIENTIST </h1>
+        <h1 className="uppercase text-[#fff] text-center text-[2rem] tracking-[.5rem] pt-[10rem] xs:text-[1rem] pt-[2rem] max-w-full text-center md:pt-[10rem] md:text-[2rem] text-center max-w-full ">Tamanna Afroz</h1>
+        <h1 className="uppercase text-[#fff] text-center text-[14px] tracking-[.2rem]  pt-4 pb-10 xs:max-w-full md:max-w-full sm:max-w-full">Front End Developer </h1>
       </div>
       <div className="flex items-center justify-center pb-10 xs:max-w-full md:max-w-full sm:max-w-full ">
         <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={downloadCvHandler}>download resume</button>
@@ -55,7 +57,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex items-center justify-center xs:max-w-full md:max-w-full sm:max-w-full" >
-        <div className=" h-[50px] bg-white w-[.006rem]"></div>
+        <div className=" h-[50px] bg-white w-[.006rem] ml-6 xs:ml-0 lg:ml-6 md:ml-6"></div>
       </div>
       <div className="flex flex-row items-center justify-center  md:w-full md:flex items-center justify-center  xs: max-w-full sm:max-w-full">
         <div className=" ">
@@ -111,7 +113,22 @@ export default function Home() {
             >
               <Projects />
             </Modal>
-            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer">competitions </button>
+
+
+            <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenExperience(true)}>   Experience </button>
+            <Modal
+              centered
+              open={openExperience}
+              onCancel={() => setOpenExperience(false)}
+              width={800}
+              footer={null}
+              className="custom-modal"
+            >
+              <ExperienceContent />
+            </Modal>
+
+
+
             <button className="uppercase tracking-[.2rem] text-[.8rem] font-semibold  p-4 border-solid border-2 border-white-600 text-[#fff] bg-[#00000000] rounded-t cursor-pointer" onClick={() => setOpenContact(true)}>contact </button>
             <Modal
               centered
