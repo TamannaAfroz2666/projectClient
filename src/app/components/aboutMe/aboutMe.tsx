@@ -30,7 +30,7 @@ const AboutMe = () => {
                 </div>
 
 
-                <p className='text-[#ffffff] text-[18px] py-4'>I have <strong className=' tracking-[.1rem]'> 1.5 years experience</strong> with React.js, Next.js, and Vue.js, during which I've developed projects such as an e-commerce platform, a job portal, and an airline booking system. I am proficient in React.js and Next.js, and have foundational knowledge of backend tools like the Nest.js framework and databases such as PostgreSQL and MySQL. </p>
+                <p className='text-[#ffffff] text-[18px] py-4'>I have <strong className=' tracking-[.1rem]'> 1.5 years experience</strong> with React.js, Next.js, and Vue.js, during which I have developed projects such as an e-commerce platform, a job portal, and an airline booking system. I am proficient in React.js and Next.js, and have foundational knowledge of backend tools like the Nest.js framework and databases such as PostgreSQL and MySQL. </p>
 
                 <p className='text-[#ffffff] text-[18px] py-4 '>I am skilled in using Git and GitLab for version control, and I effectively manage tasks with Jira and Microsoft Excel. </p>
             </div>
